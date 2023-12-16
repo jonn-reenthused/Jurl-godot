@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://1wwkreunyf3n"]
+
+[ext_resource type="Script" path="res://push_switch.gd" id="1_6wvnr"]
+
+[node name="PushSwitch" type="Control"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_6wvnr")
+isSwitched = true

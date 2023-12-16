@@ -1,0 +1,86 @@
+[gd_scene load_steps=6 format=3 uid="uid://ddn208badqfbi"]
+
+[ext_resource type="Theme" uid="uid://dva1lk32kcccy" path="res://UI/jurl-theme.tres" id="1_2if54"]
+[ext_resource type="Script" path="res://SpeedRun.gd" id="1_qieqi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3yt3d"]
+content_margin_left = 20.0
+content_margin_top = 40.0
+content_margin_right = 20.0
+content_margin_bottom = 40.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ehr2i"]
+content_margin_top = 40.0
+content_margin_bottom = 40.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xjtp0"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+expand_margin_left = 60.0
+expand_margin_top = 15.0
+expand_margin_right = 60.0
+expand_margin_bottom = 15.0
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_qieqi")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 64.0
+offset_top = 80.0
+offset_right = 1856.0
+offset_bottom = 1008.0
+
+[node name="DifficultyLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_2if54")
+theme_override_font_sizes/font_size = 80
+text = "DIFFICULTY
+
+"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3yt3d")
+text = "   "
+
+[node name="LivesLeftLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_2if54")
+theme_override_font_sizes/font_size = 80
+text = "LIVES LEFT
+
+"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ehr2i")
+
+[node name="Time" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_2if54")
+theme_override_font_sizes/font_size = 160
+text = "00:00:00.00
+
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+offset_left = 896.0
+offset_top = 920.0
+offset_right = 1012.0
+offset_bottom = 984.0
+theme = ExtResource("1_2if54")
+theme_override_colors/font_color = Color(0, 0.403922, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_xjtp0")
+text = "OK"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

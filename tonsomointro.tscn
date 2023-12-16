@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://dqui27h028pdh"]
+
+[ext_resource type="Script" path="res://tonsomointro.gd" id="1_hujvq"]
+[ext_resource type="Texture2D" uid="uid://db5lu6n7ig1gy" path="res://backgrounds/tonsomo-logo.png" id="2_mxktc"]
+[ext_resource type="Texture2D" uid="uid://ckraw2vo27wxo" path="res://icons/godot_icon_outlined.svg" id="3_osii0"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_u0heg"]
+
+[node name="Node2D" type="Node2D"]
+material = SubResource("CanvasItemMaterial_u0heg")
+position = Vector2(144, -320)
+script = ExtResource("1_hujvq")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -136.0
+offset_top = 323.0
+offset_right = -96.0
+offset_bottom = 363.0
+scale = Vector2(47.8, 26.92)
+color = Color(0, 0, 0, 1)
+
+[node name="Tonsomo-logo" type="Sprite2D" parent="ColorRect"]
+position = Vector2(19.9372, 20.0594)
+scale = Vector2(0.0209205, 0.0371471)
+texture = ExtResource("2_mxktc")
+
+[node name="GodotIconOutlined" type="Sprite2D" parent="ColorRect"]
+position = Vector2(35.7114, 29.3091)
+scale = Vector2(0.005, 0.01)
+texture = ExtResource("3_osii0")
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 22.14
+offset_right = 218.0
+offset_bottom = 48.14
+scale = Vector2(0.0326359, 0.0876672)
+text = "POWERED BY GODOT     "
+horizontal_alignment = 1
+vertical_alignment = 1
